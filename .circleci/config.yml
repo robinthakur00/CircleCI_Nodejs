@@ -19,7 +19,7 @@ jobs:
       - run:
           name: Build docker image
           command: |
-            docker build -t circleci_nodejs_app -t robinthakur00/circleci_nodejs_app:latest
+            docker build -t circleci_nodejs_app -t robinthakur00/circleci_nodejs_app:latest .
             echo $DOCKER_PASSWORD | docker login -u robinthakur00 --password-stdin
             docker push robinthakur00/circleci_nodejs_app:latest
 
